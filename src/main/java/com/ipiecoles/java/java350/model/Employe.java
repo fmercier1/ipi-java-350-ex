@@ -14,7 +14,7 @@ public class Employe {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id
+    private Long id;
 
     private String nom;
 
@@ -58,6 +58,11 @@ public class Employe {
     public Integer getNbRtt(){
         return getNbRtt(LocalDate.now());
     }
+    /**
+     *
+     * @param d
+     * @return
+     */
 
     public Integer getNbRtt(LocalDate d){
         int i1 = d.isLeapYear() ? 365 : 366;int var = 104;
